@@ -105,7 +105,7 @@
             fkey = fkey[0];
             fkey = fkey.replace(/^[?&]formkey=/,"");
         }
-        Form.action = Form.action.replace(/formkey=[^&]+/g, "formkey=" + fkey);
+        Form.action = Form.action.replace(/\/d\/d[^\/]+\/formResponse/g, "/d/" + fkey + "/formResponse");
         Form.target = ifr.id;
         if (Form.browser) {
             Form.browser.value += [navigator.userAgent, "width: "+document.width, "height: "+document.height].join("; ") 
