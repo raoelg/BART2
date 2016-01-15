@@ -155,11 +155,11 @@ embed {
     height: 36px;
     width: 159px;
     border: none;
-    background: url(../buttons/register-btn_sprite.png) no-repeat bottom left;
+    background: url(register-btn_sprite.png) no-repeat bottom left;
     cursor: pointer;
 }
 #collectBut:hover {
-    background: url(../buttons/register-btn_sprite.png) no-repeat top left;
+    background: url(register-btn_sprite.png) no-repeat top left;
 }
 
 audio {
