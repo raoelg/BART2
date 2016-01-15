@@ -1,0 +1,197 @@
+// Copyright (2011) Raoul Grasman.
+// License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
+//          To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+
+* {
+    -moz-user-select: -moz-none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    -o-user-select: none; 
+    user-select: none;
+}
+
+form {
+    display: none;
+}
+embed {
+    display: none;
+}
+#instruction {
+    font-size: 15pt;
+    width: 800px;
+    height: 600px;
+    position: relative;
+    margin-top: -575px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black; /* MSIE */
+    filter: alpha(opacity=90);
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-box-shadow: #444 5px 5px 45px;
+    -moz-box-shadow: 5px 5px 45px #444;
+    box-shadow: 5px 5px 45px #444;
+    color: white;
+    padding: 40px;
+    overflow: auto;
+}
+#nextbutton-wrapper {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    padding-left: auto;
+    padding-right: auto;
+}
+#instruction button {
+    height: 50px;
+    width: 100px;
+    margin-left: 350px;
+    box-shadow: 2px 2px 20px #444;
+    -moze-box-shadow: 2px 2px 20px #444;
+    -webkit-box-shadow: #222 2px 2px 20px;
+    color: white;
+    background: #222;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: none;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444), to(#000)); //to(#EFEFEF));
+    background: -moz-linear-gradient(top,  #444,  #000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#000000');
+}
+#instruction button:hover {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444), to(#111)); //to(#EFEFEF));
+    background: -moz-linear-gradient(top,  #444,  #111);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#111111');
+}
+
+#balloon {
+    vertical-align: bottom;
+    background-color: green;
+    margin-bottom:-14px;
+}
+#balloon-wrapper {
+  line-height: 420px;
+  border: 1px solid white; 
+  text-align: center;
+  width: 350px;
+  float: right;
+}
+#balloon-inner-wrapper {
+} 
+#pump { 
+    width: 175px;
+    height: 480px;
+    background-color: transparent;
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+}
+#pump-up {
+    height: 480px;
+    position: relative;
+    left: 8px;
+}
+#pump-down {
+    height: 480px;
+    position: relative;
+}
+#collect {
+    height: 480px;
+    position: relative;
+    left: 16px;
+}
+#tube {
+    width: 100%;
+    height:50px;
+    background: url(tube2.png) 6px 9px no-repeat;
+    margin-left:150px;
+}
+
+
+#score {
+    float: left;
+    width: 250px;
+    padding-top: 50px;
+}
+#totalEarnedWrap, 
+#lastBalloonWrap {
+    height: 80px;
+    margin: 20px;
+    margin-top: 40px;
+    border: 6px solid #fbca7b;
+    border-radius: 30px;
+    -moz-border-radius: 30px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+    background: #8a5b3d; //#f9e9b9;
+    padding: 10px;
+    text-align: center;
+    color: #ffeecc; //#72716E;
+    font-size: 150%;
+    text-transform: capitalize;
+}
+#totalEarned, 
+#lastBalloon {
+    margin-top: 15px;
+    font-size: 150%;
+    color: white;
+}
+#totalEarned:before, 
+#lastBalloon:before {
+    content: "\20ac ";
+}
+
+#collectBut {
+    font: normal 13px/1.6em Chalkboard, "Comic Sans MS", cursive, 'Lucida Grande', Lucida, Verdana, sans-serif;
+    font-size: 130%;
+    color: brown;
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 36px;
+    width: 159px;
+    border: none;
+    background: url(../buttons/register-btn_sprite.png) no-repeat bottom left;
+    cursor: pointer;
+}
+#collectBut:hover {
+    background: url(../buttons/register-btn_sprite.png) no-repeat top left;
+}
+
+audio {
+    display: none;
+}
+
+html {
+    height: 100%;
+    margin-bottom: 1px;
+}
+
+body {
+    color: #32312F;
+    background-color: #E2E1DE;
+    font: normal 13px/1.6em 'Lucida Grande', Lucida, Verdana, sans-serif;
+    font: normal 13px/1.6em Chalkboard, "Comic Sans MS", cursive, 'Lucida Grande', Lucida, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+#main {
+    width: 848px;
+    margin: 0 auto;
+    background: ; 
+}
+
+#inner {
+    width: 800px;
+    min-height: 510px;
+    margin: 44px auto;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+    background: white; 
+    overflow: hidden;
+}

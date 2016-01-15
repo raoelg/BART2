@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!--
+ Copyright (2011) Raoul Grasman.
+ License: This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
+          To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+-->
+<script src="parsFromSpreadsheet.js"></script>
+<!--script src="bart.js" type="text/javascript"></script-->
+<link rel="stylesheet" type="text/css" href="bart.css">
+<title>Balloon Test</title>
+</head>
+<body scroll="no">
+
+<div id="main">
+<div id="inner">
+
+    <div id="score">
+        <div id="totalEarnedWrap">
+            <div id="totalEarnedText">Totaal verdiend:</div>
+            <div id="totalEarned"></div>
+        </div>
+        <div id="lastBalloonWrap">
+            <div id="lastBalloonText">Voor laatste ballon:</div>
+            <div id="lastBalloon"></div>
+        </div>
+        <button id="collectBut">&euro;&euro;&euro;</button>
+    </div>
+    
+    <div id="pump">&nbsp;
+        <img src="pump-up-transp.png" id="pump-up" />
+        <img src="pump-down-transp.png" id="pump-down" />
+        <img src="collect.png" id="collect" />
+    </div>
+    <div id="balloon-wrapper">
+        <div id="ballon-inner-wrapper">&nbsp;
+            <img id="balloon" src="balloon-transp.png" width="50" />
+            <div id="tube"></div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+
+<div id="instruction">
+<div></div>
+<div id="nextbutton-wrapper">
+<button value="next" id="nextBut" class="button">OK</button>
+</div>
+</div>
+
+
+
+
+<audio id="inflateSound" controls preload="auto" > 
+    <source src="inflate.au" />
+    <source src="inflate.wav" />
+    <source src="inflate.mp3" />
+    <!-- now include flash fall back (see http://flash-mp3-player.net/players/normal/documentation/) -->
+	<embed id="inflateSoundX" src="inflate.mp3" autoplay="false" />
+</audio>
+<audio id="popSound" controls preload="auto" > 
+    <source src="pop.au" />
+    <source src="pop.wav" />
+    <source src="pop.mp3" />
+    <!-- now include flash fall back -->
+	<embed id="popSoundX" src="pop.mp3" autoplay="false" />
+</audio>
+<audio id="paySound" controls preload="auto" > 
+    <source src="payoff.au" />
+    <source src="payoff.wav" />
+    <source src="payoff.mp3" />
+    <!-- now include flash fall back -->
+	<embed id="paySoundX" src="payoff.wav" autoplay="false" />
+</audio>
+
+<!-- https://docs.google.com/forms/d/1Fx_BaJEoOzc-OYsI8a2YxErU9OFnPeacfiQvK_z0slo/formResponse -->
+
+<form action="https://spreadsheets.google.com/formResponse?formkey=dFAxTHd2elQzWDdIMGN0LWxtcXVqUWc6MA&amp;theme=0AX42CRMsmRFbUy03NTAzM2Q4My03ODU1LTQ2NzItODI2YS1kZmU5YzdiMzZjOGQ&amp;ifq" method="POST" id="ss-form"> 
+ 
+<br> 
+ 
+<label class="ss-q-title" for="subject_id">Subject ID
+<span class="ss-required-asterisk">*</span></label> 
+<input type="text" name="entry.1000000" value="" class="ss-q-short" id="subject_id" "entry_0"> 
+<br>  
+<label class="ss-q-title" for="trial_record">Trial record</label> 
+<input type="text" name="entry.1000001" value="" class="ss-q-short" id="trial_record" "entry_1"> 
+<br>  
+<label class="ss-q-title" for="estimates">Estimates</label> 
+<input type="text" name="entry.1000003" value="" class="ss-q-short" id="estimates" "entry_2"> 
+<br>  
+<label class="ss-q-title" for="OSinfo">OS</label> 
+<input type="text" name="entry.1000004" value="" class="ss-q-short" id="OSinfo" "entry_4"> 
+<br>  
+<label class="ss-q-title" for="browser">Browser information</label> 
+<input type="text" name="entry.1000005" value="" class="ss-q-short" id="browser" "entry_6"> 
+<br>  
+<label class="ss-q-title" for="screen">Screen</label> 
+<input type="text" name="entry.1000006" value="" class="ss-q-short" id="screen" "entry_8"> 
+<br> 
+<input type="hidden" name="pageNumber" value="0"> 
+<input type="hidden" name="backupCache" value=""> 
+ 
+ 
+<input type="submit" name="submit" value="Submit"></form> 
+
+
+
+</body>
+</html>
+
