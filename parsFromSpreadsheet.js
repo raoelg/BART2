@@ -165,7 +165,8 @@
             Form[Form.length - 1].browser.value += "; ip: " + VIH_HostIP;
         } catch(e) {}}, 30 * 1000);
         */
-        ipscr.src = "http://jsonip.appspot.com/?callback=_getip";
+        //ipscr.src = "http://jsonip.appspot.com/?callback=_getip";
+        ipscr.src = "https://api.ipify.org?format=jsonp&callback=_getip";
         window["_getip"] = registerGeoLocation;
         document.head.appendChild(ipscr);
     } catch(e) {}
